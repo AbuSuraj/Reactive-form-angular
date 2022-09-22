@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {FormGroup,FormControl} from '@angular/forms'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reactive-form';
+  registrationForm = new FormGroup({
+    userName: new FormControl('Abu'),
+    password: new FormControl(''),
+    confirmPassword: new FormControl(''),
+  })
 }
